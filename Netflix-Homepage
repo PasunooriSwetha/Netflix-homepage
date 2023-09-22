@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Netflix-like Homepage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav li {
+      list-style: none;
+      margin-left: 15px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .banner {
+      position: relative;
+      height: 400px;
+      background-image: url('netflix.png');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 40px;
+    }
+
+    .banner::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+    }
+
+    .banner-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .banner-content h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .banner-content p {
+      font-size: 18px;
+    }
+
+    .movies-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+    }
+
+    .movie-card {
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .movie-card img {
+      width: 200px;
+      height: 300px;
+      object-fit: cover; 
+      border-radius: 5px;
+    
+    }
+
+    .movie-card:hover {
+      transform: scale(1.05);
+    }
+
+    .movie-card .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .movie-card:hover .overlay {
+      opacity: 1;
+    }
+
+    .movie-card .overlay-content {
+      text-align: center;
+    }
+
+    .movie-card .overlay-content h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .movie-card .overlay-content p {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 style="color: red;" class="logo">Netflix</h1> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">TV Shows</a</li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">My List</a></li>
+        <li><a href="#">subscription</a></li>
+        <li><a href="#">Account</a></li>
+      </ul>
+    </header>
+
+    <div class="banner">
+      <div class="banner-content">
+    
+        <h1>Welcome to Netflix</h1>
+        <p>Watch unlimited movies and TV shows anytime, anywhere.</p>
+      </div>
+    </div>
+
+
+
+
+    <h2>Hollywood Movies</h2>
+    <div class="movies-container">
+      <div class="movie-card">
+        <img src="inception.jpeg">
+        <div class="overlay">
+          <div class="overlay-content">
+            
+            <p>Inception</p>
+          </div>
+        </div>
+      </div>
+      <div class="movie-card">
+       <img src="main-qimg.jpeg">
+        <div class="overlay">
+          <div class="overlay-content">
+            
+            <p>The Pursuit of Happyness</p>
+          </div>
+        </div>
+      </div>
+      <div class="movie-card">
+        <img src="ins.jpeg">
+        <div class="overlay">
+          <div class="overlay-content">
+            
+            <p>Interstellar</p>
+          </div>
+        </div>
+      </div>
+      <div class="movie-card">
+        <img src="movie4.jpeg" alt="Movie 4">
+        <div class="overlay">
+          <div class="overlay-content">
+           
+            <p>The Shawshank Redemption</p>
+          </div>
+        </div>
+      </div>
+      <div class="movie-card">
+        <img src="nun.jpeg">
+        <div class="overlay">
+          <div class="overlay-content">
+           
+            <p>The NUN</p>
+      </div>
+      </div>
+    </div>
+    <div class="movie-card">
+        <img src="tenet.jpeg">
+        <div class="overlay">
+          <div class="overlay-content">
+           
+            <p>TENET</p>
+      </div>
+      </div>
+    </div>
+    <div class="movie-card">
+        <img src="drive.jpg">
+        <div class="overlay">
+          <div class="overlay-content">
+           
+            <p>Drive</p>
+      </div>
+      </div>
+    </div>
+    <div class="movie-card">
+        <img src="titanic.jpeg">
+        <div class="overlay">
+          <div class="overlay-content">
+           
+            <p>TITANIC</p>
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <h2>Tollywood Movies</h2>
+    <div class="movies-container">
+      <div class="movie-card">
+        <img src="adipurush.jpeg">
+        <div class="overlay">
+          <div class="overlay-content">
+            
+            <p>Adipurush</p>
+          </div>
+        </div>
+      </div>
+      <div class="movie-card">
+       <img src="sita ramam.jpg">
+        <div class="overlay">
+          <div class="overlay-content">
+            
+            <p>Sita Ramam</p>
+          </div>
+        </div>
+      </div>
+      <div class="movie-card">
+        <img src="dear.jpeg">
+        <div class="overlay">
+          <div class="overlay-content">
+            
+            <p>Dear Comrade</p>
+          </div>
+        </div>
+      </div>
+      <div class="movie-card">
+        <img src="3movie.jpeg">
+        <div class="overlay">
+          <div class="overlay-content">
+            
+            <p>Three</p>
+          </div>
+        </div>
+      </div>
+      <div class="movie-card">
+        <img src="https://i0.wp.com/moviegalleri.net/wp-content/uploads/2018/06/Vijay-Devarakonda-Rashmika-Mandanna-Geetha-Govindam-First-Look-Poster-HD.jpg?ssl=1">
+        <div class="overlay">
+          <div class="overlay-content">
+            
+            <p>Gita Govindam</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="movie-card">
+        <img src="https://c8.alamy.com/comp/P1K710/mahanati-indian-poster-in-telugu-keerthi-suresh-2018-vyjajanthi-moviescourtesy-everett-collection-P1K710.jpg">
+        <div class="overlay">
+          <div class="overlay-content">
+            
+            <p>Mahanati</p>
+          </div>
+        </div>
+      </div>
+      <div class="movie-card">
+        <img src="https://files.prokerala.com/movies/pics/800/tholi-prema-posters-84058.jpg">
+        <div class="overlay">
+          <div class="overlay-content">
+            
+            <p>TholliPrema</p>
+          </div>
+        </div>
+      </div>
+      <div class="movie-card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Darling_%282010%29_poster.jpg">
+        <div class="overlay">
+          <div class="overlay-content">
+            
+            <p>Darling</p>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</body>
+</html>
